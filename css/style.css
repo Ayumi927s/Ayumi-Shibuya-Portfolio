@@ -10,9 +10,13 @@
 
 .main_first {
     width: 50%;
-    margin-left: 180px;
 }
 
+.main_first P {
+    font-family: "Prompt";
+    font-size: 32px;
+    font-weight: 600;
+}
 .main_catch {
     text-align: right;
     margin-top: 80px;
@@ -27,6 +31,7 @@
     width: 100%;
     height: 30vh;
     position: relative;
+    margin-top: 80px;
 }
 
 .scroll:before {
@@ -145,6 +150,7 @@
 .scrolldown:before {
     transition: 0.5s;
 }
+
 /*aboutイメージ*/
 
 .fluid {
@@ -277,7 +283,7 @@
 
 /*ここからabout*/
 #about {
-    margin-top: 85px;
+    margin-top: 80px;
     overflow: hidden;
 }
 
@@ -285,7 +291,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 250px 0 350px;
+    padding: 250px 0 80px;
 }
 
 .about_base {
@@ -297,8 +303,8 @@
 
 .fluid {
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: 45%;
+    left: 72%;
     transform: translate(-50%, -50%);
     border-radius: 99rem;
 }
@@ -318,7 +324,7 @@
 
 .about_wrapper {
     position: absolute;
-    top: 44%;
+    top: 32%;
     right: 0;
     width: 51.6%;
     color: #fff;
@@ -365,7 +371,7 @@
 .skill_wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: -70px auto 0;
     max-width: 1000px;
 }
 
@@ -378,7 +384,7 @@
     text-align: center;
 }
 
-.skill_group h5 {
+.skill_group h3 {
     font-size: 16px;
     line-height: 1.75;
 }
@@ -387,7 +393,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 .ai {
@@ -433,6 +439,8 @@
 .skill_p {
     font-size: 18px;
     line-height: 1.8;
+    padding-top: 80px;
+    margin: 0 40px;
 }
 
 /*アニメーション*/
@@ -489,14 +497,14 @@
 .gallery_wrap {
     position: relative;
     max-width: 1000px;
-    margin: 50px auto;
-    padding: 80px 0;
+    margin: 0 auto;
+    padding: 150px 0;
 }
 
 .gallery_logo {
     position: absolute;
-    top: -50px;
-    left: -25px;
+    top: -37px;
+    left: -74px;
 }
 
 .gallery_wrapper img {
@@ -513,7 +521,7 @@
 .gallery_wrapper ul {
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
@@ -522,7 +530,7 @@
 .gallery_wrapper li {
     position: relative;
     width: 45%;
-    margin: 0 20px 40px;
+    margin-bottom: 80px;
 }
 
 .gallery_title {
@@ -551,13 +559,13 @@ li:hover .gallery_title {
 .btn {
     display: block;
     width: 334px;
-    margin: 80px auto 40px;
+    margin: 0 auto;
     padding: 20px 0;
     border: 1px solid #0010ec;
     border-radius: 40px;
     line-height: 1;
     font-family: "prompt";
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
     color: #0010ec;

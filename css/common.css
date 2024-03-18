@@ -31,10 +31,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #f2f7fa;
-}
-
 a {
     /*下線を消す*/
     text-decoration: none;
@@ -65,6 +61,7 @@ img {
     height: 100%;
     background-image: url(../images/loding.png);
     background-size: cover;
+    background-position: bottom;
     z-index: 9999999;
     text-align: center;
 }

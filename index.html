@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="portfolio">
     <title>shibuya ayumiのportfolio</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -45,7 +48,7 @@
         <section id="home">
             <div class="main_wrap">
                 <div class="main_first">
-                    <img src="images/hello.png" alt="あいさつ">
+                    <p>Hello</p>
                 </div>
                 <div class="main_catch">
                     <h1>
@@ -134,7 +137,7 @@
                                 <img src="images/js_logo.png" alt="jS_logo" class="js_menu">
                             </div>
                         </div>
-                        <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。
+                        <p class="skill_p">HTML,CSSを使用しわかりやすい丁寧なコーディングを心がけています。<br>
                             またj Queryなどを使用し動きのあるサイトの実装も行います。</p>
                     </div>
                 </div>
@@ -149,9 +152,7 @@
                 </div>
                 <div class="gallery_wrapper">
                     <ul>
-                        <li><a href="#"><img src="#" alt="portfolio" class="gallery_img">
-                                <div class="gallery_title">portfolio<span></span></div>
-                            </a></li>
+
                         <li><a href="works/work1.html"><img src="images/kadai_03_shibuya_pop04ol.jpg" alt="web_banner"
                                     class="gallery_img">
                                 <div class="gallery_title">web用バナー</div>
@@ -164,15 +165,19 @@
                                 <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
                                 <div class="gallery_title">cafeサイト</div>
                             </a></li>
+                        <li><a href="works/work4.html"><img src="images/Kadai_shibuya-02.jpg" alt="trace"
+                                    class="gallery_img">
+                                <div class="gallery_title">トレース</div>
+                            </a></li>
                     </ul>
                 </div>
 
                 <div class="gallery_wrapper hide">
                     <ul class="gallery_hide">
-                        <li><a href="works/work4.html"><img src="images/Kadai_shibuya-02.jpg" alt="trace"
-                                    class="gallery_img">
-                                <div class="gallery_title">トレース</div>
+                        <li><a href="#"><img src="#" alt="portfolio" class="gallery_img">
+                                <div class="gallery_title">portfolio<span></span></div>
                             </a></li>
+
                         <li class="visibiliry-hidden"><a href="works/work3.html">
                                 <img src="images/design_cafe.jpg" alt="design_cafe" class="gallery_img">
                                 <div class="gallery_title">cafeサイト</div>
@@ -254,6 +259,30 @@
                 })
             })
         })
+
+        //スクロールしたら消える
+        $(function () {
+            $('.scrolldown').click(function () {
+                var speed = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({ scrollTop: position }, speed, "swing");
+                return false;
+            });
+
+            var scrollend = $('#about').offset().top + 50; //ページ上部からプラス50pxした距離を取得
+            var distance = 0;
+            $(document).scroll(function () {
+                distance = $(this).scrollTop(); //スクロールした距離を取得
+                if (scrollend <= distance) {
+                    $('.scroll').fadeOut();
+                } else {
+                    $('.scroll').fadeIn();
+                }
+            });
+
+        });
     </script>
 
     <script src="js/script.js"></script>

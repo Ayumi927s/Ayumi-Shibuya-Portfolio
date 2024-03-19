@@ -750,6 +750,7 @@ li:hover .gallery_title {
     }
 
     .fluid {
+        top: 150px;
         left: 50%;
         z-index: 1;
     }
@@ -797,6 +798,6 @@ li:hover .gallery_title {
     }
 
     .visibiliry-hidden {
-        visibility: visible;
+        display: none;
     }
 }

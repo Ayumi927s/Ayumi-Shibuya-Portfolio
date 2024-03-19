@@ -505,3 +505,11 @@ button img {
         z-index: 99;
     }
 }
+
+/*ここから1000px未満*/
+@media (max-width: 1020px) and (min-width: 768px) {
+    #container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

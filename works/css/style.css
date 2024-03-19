@@ -109,6 +109,10 @@ body {
     height: auto;
 }
 
+.sp_br {
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
     .main_wrap {
         padding: 0 5%;
@@ -140,5 +144,9 @@ body {
     }
     .fv_sp img {
         height: auto;
+    }
+
+    .sp_br {
+        display: block;
     }
 }

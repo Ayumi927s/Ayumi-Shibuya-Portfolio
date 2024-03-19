@@ -17,6 +17,81 @@
     font-size: 32px;
     font-weight: 600;
 }
+
+.bgextend {
+    animation-name: bgextendAnimeBase;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    overflow: hidden; /*　はみ出た色要素を隠す　*/
+    opacity: 0;
+}
+
+@keyframes bgextendAnimeBase {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*中の要素*/
+.bgappear {
+    animation-name: bgextendAnimeSecond;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*左から右*/
+.bgLRextend::before {
+    animation-name: bgLRextendAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0010ec; /*伸びる背景色の設定*/
+    border-radius: 25px;
+}
+
+@keyframes bgLRextendAnime {
+    0% {
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+    50% {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    50.001% {
+        transform-origin: right;
+    }
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgLRextendTrigger {
+    opacity: 0;
+}
+
 .main_catch {
     text-align: right;
     margin-top: 80px;
@@ -154,10 +229,15 @@
 /*aboutイメージ*/
 
 .fluid {
-    position: relative;
+    position: absolute;
+    top: 55%;
+    left: 72%;
     width: 650px;
     height: 650px;
+    transform: translate(-50%, -50%);
+    border-radius: 99rem;
 }
+
 .fluid_obj {
     position: absolute;
     top: 0;
@@ -291,7 +371,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 250px 0 80px;
+    padding: 250px 0 170px;
 }
 
 .about_base {
@@ -299,14 +379,6 @@
     align-items: center;
     width: 100%;
     margin-left: 25px;
-}
-
-.fluid {
-    position: absolute;
-    top: 45%;
-    left: 72%;
-    transform: translate(-50%, -50%);
-    border-radius: 99rem;
 }
 
 .about_img {
@@ -364,10 +436,11 @@
 }
 
 @media screen and (max-width: 1100px) {
-    .skill_wrap h2 {
+    .skill_wrap h3 {
         margin-right: 0px;
     }
 }
+
 .skill_wrapper {
     display: flex;
     justify-content: space-between;
@@ -569,7 +642,9 @@ li:hover .gallery_title {
     font-weight: 600;
     text-align: center;
     color: #0010ec;
+    cursor: pointer;
 }
+
 .btn::after {
     content: " ";
     position: absolute;
@@ -599,6 +674,28 @@ li:hover .gallery_title {
     visibility: hidden;
 }
 
+/*ここからタブレット版*/
+@media (max-width: 980px) and (min-width: 768px) {
+    .main_first {
+        display: none;
+    }
+    .about_base {
+        max-width: 100%;
+    }
+
+    .about_title {
+        left: -12px;
+    }
+
+    .gallery_wrapper {
+        margin: 0 5%;
+    }
+
+    .gallery_logo {
+        left: 0;
+    }
+}
+
 /*ここからSP版*/
 @media screen and (max-width: 767px) {
     .main_wrap {
@@ -606,7 +703,7 @@ li:hover .gallery_title {
     }
 
     .main_first {
-        margin: 0 auto;
+        display: none;
     }
 
     .main_catch {
@@ -614,11 +711,11 @@ li:hover .gallery_title {
     }
 
     #about {
-        margin-top: 45px;
+        margin: 45px 0;
     }
 
     .about_wrap {
-        margin: 40px 0 250px;
+        margin: 250px 0 250px;
     }
 
     .about_img img {
@@ -630,13 +727,13 @@ li:hover .gallery_title {
         width: 80%;
         position: absolute;
         right: 5%;
-        bottom: -195px;
+        bottom: -237px;
         border-radius: 20px;
     }
 
     .about_wrapper {
-        width: 65%;
-        top: 18%;
+        width: 70%;
+        top: -22%;
         left: 22%;
         z-index: 50;
     }
@@ -647,6 +744,7 @@ li:hover .gallery_title {
     }
 
     .about_title {
+        top: -253px;
         left: 15px;
         z-index: 20;
     }
@@ -656,6 +754,10 @@ li:hover .gallery_title {
         z-index: 1;
     }
 
+    .sp_br {
+        display: none;
+    }
+
     .skill_wrapper {
         display: block;
     }
@@ -663,7 +765,7 @@ li:hover .gallery_title {
     .skill_col {
         margin: 0 auto;
         width: 80%;
-        padding-top: 105px;
+        padding-top: 20px;
     }
 
     .skill_p {
@@ -674,6 +776,7 @@ li:hover .gallery_title {
 
     .gallery_wrap {
         display: block;
+        padding: 80px 0;
     }
 
     .gallery_wrapper ul {

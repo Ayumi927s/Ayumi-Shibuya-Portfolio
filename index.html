@@ -81,7 +81,8 @@
                         <img src="images/about_sp.jpg" alt="about写真_sp版">
                     </div>
                     <div class="about_title">
-                        <h2><img src="images/about_logo.png" alt="about"></h2>
+                        <h2><img srcset="image/about.png 1x, images/about@2x.png 2x" src="images/about@2x.png"
+                                alt="about"></h2>
                     </div>
 
                 </div>
@@ -100,7 +101,10 @@
 
         <section id="skill">
             <div class="skill_wrap">
-                <h2><img src="images/skill.png" alt="skill_logo" class="skill"></h2>
+                <h2>
+                    <img srcset="image/skill.png 1x, images/skill@2x.png 2x" src="images/skill@2x.png" alt="skill_logo"
+                        class="skill">
+                </h2>
                 <div class="skill_wrapper">
                     <div class="skill_col">
                         <div class="skill_group">
@@ -148,7 +152,8 @@
         <section id="gallery">
             <div class="gallery_wrap">
                 <div class="gallery_logo">
-                    <h2><img src="images/gallery.png" alt="gallery"></h2>
+                    <h2><img srcset="image/gallery.png 1x, images/gallery@2x.png 2x" src="images/gallery@2x.png"
+                            alt="gallery"></h2>
                 </div>
                 <div class="gallery_wrapper">
                     <ul>
@@ -271,10 +276,11 @@
         if ($(window).width() > 768) { //768px以上の時
 
             $(function () {
-                $(".scrolldown:before").on('click', function () {
+                $(".scrolldown").on('window', function () {
                     $(this).toggleClass("active");
                 });
             });
+
             //円の拡大
             $(function () {
                 /* スクロール量 代入用 */
@@ -290,7 +296,7 @@
                     sum = 1 + scroll / 80;
                     console.log(sum);
                     /* 円の大きさにスクロール量を足す */
-                    $(".scrolldown").css({
+                    $(".active").css({
                         "transform": "scale(" + sum + ")"
                     })
                 })

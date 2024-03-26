@@ -433,7 +433,6 @@ button img {
         height: 100%;
     }
     .sp_nav ul li {
-        padding: 20px;
         color: #131313;
         font-size: 80px;
         font-family: "Prompt", sans-serif;
@@ -445,6 +444,7 @@ button img {
         position: relative;
         overflow: hidden;
         text-decoration: none;
+        line-height: 1.25;
     }
 
     a:after {

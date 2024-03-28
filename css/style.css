@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.body {
+body {
     overflow-x: hidden;
 }
 
@@ -172,10 +172,10 @@
     /*描画位置*/
     position: absolute;
     bottom: 0;
-    left: -4px;
+    left: -2px;
     /*丸の形状*/
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: #0010ec;
     /*丸の動き1.6秒かけて透過し、永遠にループ*/
@@ -223,7 +223,7 @@
     background: #131313;
 }
 .scrolldown.active:before {
-    transform: scale(8);
+    transform: scale(10);
 }
 
 .scrolldown:before {

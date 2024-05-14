@@ -772,6 +772,25 @@ li:hover .gallery_title {
         width: 80%;
         padding-top: 20px;
     }
+    .ai_menu {
+        left: 43px;
+        bottom: 20px;
+    }
+
+    .ps_menu {
+        left: 40px;
+        bottom: 20px;
+    }
+
+    .html_css_menu {
+        right: 20px;
+        bottom: 23px;
+    }
+
+    .js_menu {
+        right: 25px;
+        bottom: 20px;
+    }
 
     .skill_p {
         margin: 0 12%;

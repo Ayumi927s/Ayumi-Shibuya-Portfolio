@@ -479,8 +479,8 @@ body {
 
 .ai_menu {
     position: absolute;
-    left: 40px;
-    bottom: 20px;
+    left: 73px;
+    bottom: 43px;
 }
 
 .ps {
@@ -489,8 +489,8 @@ body {
 
 .ps_menu {
     position: absolute;
-    left: 40px;
-    bottom: 20px;
+    left: 63px;
+    bottom: 43px;
 }
 
 .html_css {
@@ -499,8 +499,8 @@ body {
 
 .html_css_menu {
     position: absolute;
-    right: 17px;
-    bottom: 20px;
+    right: 44px;
+    bottom: 43px;
 }
 
 .js {
@@ -509,8 +509,8 @@ body {
 
 .js_menu {
     position: absolute;
-    right: 30px;
-    bottom: 20px;
+    right: 44px;
+    bottom: 43px;
 }
 
 .skill_p {
